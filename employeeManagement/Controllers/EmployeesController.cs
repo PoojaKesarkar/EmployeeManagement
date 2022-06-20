@@ -96,9 +96,9 @@ namespace employeeManagement.Controllers
                 }
                 return View(employee);
             }
-            catch (Exception ex)
+            catch (Exception exep)
             {
-                _logger.LogError(ex.Message);
+                _logger.LogError(exep.Message);
 
                 return RedirectToAction("Index");
             }
@@ -131,7 +131,6 @@ namespace employeeManagement.Controllers
             return View(employee);
         }
 
-       
         public async Task<IActionResult> Delete(int? id)
         {
             try
@@ -162,7 +161,6 @@ namespace employeeManagement.Controllers
             }
             
         }
-
         private bool EmployeeExists(int id)
         {
             return _context.Employee.Any(e => e.ID == id);

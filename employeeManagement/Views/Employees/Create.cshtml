@@ -1,0 +1,72 @@
+﻿@model employeeManagement.Models.Employee
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<a asp-action="Index" class="btn btn-info">
+
+    <img src="~/css/Icons/arrow-left-circle.svg" width="25" height="25" fill="currentColor" viewBox="0 0 25 25" />
+</a>
+
+<h1 style="text-align:center;">Add New Employee</h1>
+<br />
+<div class="card">
+    <div class="card-body">
+        <form asp-action="Create" name="formValidate">
+            <div class="row">
+                <div class="col-md-6">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label formLabel">Name<span class="text-danger">*</span>:</label>
+                        <input asp-for="Name" name="name" class="formControl-outline" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Location" class="control-label formLabel">Location<span class="text-danger">*</span>:</label>
+                        <input asp-for="Location" name="location" class="formControl-outline" />
+                        <span asp-validation-for="Location" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label formLabel">Email ID<span class="text-danger">*</span>:</label>
+                        <input asp-for="Email" name="email" class="formControl-outline" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Mobile" class="control-label formLabel">Mobile No.<span class="text-danger">*</span>:</label>
+                        <input asp-for="Mobile" name="mobile" class="formControl-outline" />
+                        <span asp-validation-for="Mobile" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="DeptID" class="control-label formLabel">Department<span class="text-danger">*</span>:</label>
+                        @*<input asp-for="DeptID" name="DeptID" class="form-control" />*@
+                        <select asp-for="DeptID" name="DeptID" class="formControl-outline" asp-items="@(new SelectList(ViewBag.DeptList, "DeptID", "Name"))">
+                            <option value="">Please select...</option>
+                        </select>
+                        <span asp-validation-for="DeptID" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="form-group">
+                        <input type="submit" value="Add Employee" class="btn btn-info" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

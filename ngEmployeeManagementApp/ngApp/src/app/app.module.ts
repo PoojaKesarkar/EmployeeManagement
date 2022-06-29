@@ -15,7 +15,8 @@ import { EmployeeService } from 'src/app/APIService/shared.service';
   declarations: [
     AppComponent,
     NavMenuComponent,
-    EmpListComponent
+    EmpListComponent,
+    AddEmpComponent
         
   ],
   imports: [

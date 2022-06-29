@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ngApp\src\app\Employee\AddEmployee\AddEmployee.component.ts" />
+    <None Remove="ngApp\src\app\Employee\EmployeeList\EmployeeList.component.ts" />
+    <None Remove="ngApp\src\app\shared.service.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.22" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ngApp\src\app\Employee\AddEmployee\AddEmployee.component.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ngApp\src\app\Employee\EmployeeList\EmployeeList.component.ts" />
+    <TypeScriptCompile Include="ngApp\src\app\APIService\shared.service.ts" />
+  </ItemGroup>
+
+</Project>

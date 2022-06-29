@@ -1,18 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pooja.kesarkar\\employeeManagement\\employeeManagement\\employeeManagement.csproj": {}
+    "C:\\Users\\pooja.kesarkar\\git\\employeeManagement\\employeeManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pooja.kesarkar\\employeeManagement\\employeeManagement\\employeeManagement.csproj": {
+    "C:\\Users\\pooja.kesarkar\\git\\employeeManagement\\employeeManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pooja.kesarkar\\employeeManagement\\employeeManagement\\employeeManagement.csproj",
+        "projectUniqueName": "C:\\Users\\pooja.kesarkar\\git\\employeeManagement\\employeeManagement.csproj",
         "projectName": "employeeManagement",
-        "projectPath": "C:\\Users\\pooja.kesarkar\\employeeManagement\\employeeManagement\\employeeManagement.csproj",
+        "projectPath": "C:\\Users\\pooja.kesarkar\\git\\employeeManagement\\employeeManagement.csproj",
         "packagesPath": "C:\\Users\\pooja.kesarkar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pooja.kesarkar\\employeeManagement\\employeeManagement\\obj\\",
+        "outputPath": "C:\\Users\\pooja.kesarkar\\git\\employeeManagement\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\pooja.kesarkar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
